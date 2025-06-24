@@ -1,0 +1,70 @@
+@baseUrl = http://localhost:3333
+@productId = 229423
+
+### -------------------------------
+
+# Create a product
+# @name create_product
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+  "name": "Maçã",
+  "price": 9.99,
+  "expiration": "2025-12-31T00:00:00.000Z"
+}
+
+### -------------------------------
+
+@page = 1
+@limit = 10
+@search = ""
+
+# List all products
+# @name search_products
+GET {{baseUrl}}/products?page={{page}}&limit={{limit}}&search={{search}}
+Accept: application/json
+
+### -------------------------------
+
+# Find a product by ID
+# @name find_product
+GET {{baseUrl}}/products/{{productId}}
+Accept: application/json
+
+### -------------------------------
+
+# Update a product
+# @name update_product
+PATCH {{baseUrl}}/products/{{productId}}
+Content-Type: application/json
+
+{
+  "name": "Engage global e-markets #(4264397578870836)",
+  "price": 35,
+  "expiration": "2027-12-31T00:00:00.000Z"
+}
+
+### -------------------------------
+
+# Delete a product
+# @name delete_product
+DELETE {{baseUrl}}/products/{{productId}}
+Content-Type: application/json
+
+### -------------------------------
+
+# Upload products from csv file
+# @name upload_csv
+POST {{baseUrl}}/products/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="file"; filename="data_200k.csv"
+Content-Type: text/csv
+
+< ./test/fixtures/data_200k.csv
+
+------WebKitFormBoundary--
+
+

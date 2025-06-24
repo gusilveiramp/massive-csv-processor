@@ -1,0 +1,10 @@
+# macOS system files
+.DS_Store
+
+# IDE folders (optional)
+.vscode/
+.idea/
+
+# Environment variables at root (if created in the future)
+.env
+.env.*

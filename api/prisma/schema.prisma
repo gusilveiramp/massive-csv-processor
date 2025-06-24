@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id            Int                   @id @default(autoincrement())
+  name          String?
+  price         Decimal?              @db.Decimal(10, 2)
+  expiration    DateTime?
+  createdAt     DateTime              @default(now()) @map("created_at")
+  updatedAt     DateTime?             @updatedAt @map("updated_at")
+  deletedAt     DateTime?             @map("deleted_at")
+  exchangeRates ProductExchangeRate[]
+
+  @@map("products")
+}
+
+model ProductExchangeRate {
+  id             Int      @id @default(autoincrement())
+  product        Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId      Int      @map("product_id")
+  currency       String   @db.VarChar(3)
+  exchangeRate   Decimal  @map("exchange_rate") @db.Decimal(10, 6)
+  convertedPrice Decimal? @map("converted_price") @db.Decimal(10, 2)
+
+  @@map("product_exchange_rates")
+}
