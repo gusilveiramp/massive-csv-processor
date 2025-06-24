@@ -53,11 +53,15 @@ Then follow the steps in its [README.md](./mobile/README.md) to:
 
 5. Upload a CSV file and watch the real-time processing progress
 
-## 🎥 Video Walkthrough
+## 🎬 Quick Demo (No Audio)
 
-You can watch a short walkthrough of the solution here:
+Short demo of the system in action:
 
-👉 [Watch the video](https://youtu.be/Vbo6Bdi3QMM)
+👉 [Watch the demo](https://youtu.be/Vbo6Bdi3QMM)
+
+## 🎥 Full Video Walkthrough (TODO)
+
+A step-by-step video tutorial explaining the project setup and architecture will be available soon.
 
 ## Author
 
