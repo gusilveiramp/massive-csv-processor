@@ -1,12 +1,23 @@
-# Massive CSV Processor 🚀
+# Massive CSV Processor 🚀 – High-Volume, Real-Time CSV Import System
 
-Real-time, scalable CSV processing with NestJS, BullMQ, Redis, and React Native - featuring multi-file uploads, queue-based workers, and WebSocket progress updates.
+A scalable and high-performance full-stack system designed for **massive CSV file processing**. Capable of handling **millions of rows**, this solution leverages **NestJS**, **BullMQ**, **Redis**, and **PostgreSQL** on the backend, combined with a **React Native mobile client** for real-time monitoring via **WebSocket**.
 
 <div align="center">
   <img src="docs/demo.gif" alt="Demo" />
 </div>
 
-This monorepo contains two projects built for a scalable CSV processing system:
+## 📌 Features
+
+- **Handles multiple concurrent CSV uploads**
+- **Background queue-based processing with horizontal scalability**
+- **Real-time progress tracking via WebSocket**
+- **Optimized mobile rendering for large datasets (infinite scroll with FlatList tuning)**
+
+---
+
+## 📂 Monorepo Structure
+
+This monorepo contains two projects:
 
 - [`api`](./api): Backend API built with **NestJS**, **PostgreSQL**, **Prisma**, **Redis**, and **BullMQ**.
 - [`mobile`](./mobile): Mobile app built with **React Native**, using **Expo**, and **WebSocket** support for real-time progress tracking.
