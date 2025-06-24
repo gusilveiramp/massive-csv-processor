@@ -1,4 +1,6 @@
-# Setup Instructions
+# Massive CSV Processor 🚀
+
+Real-time, scalable CSV processing with NestJS, BullMQ, Redis, and React Native - featuring multi-file uploads, queue-based workers, and WebSocket progress updates.
 
 <div align="center">
   <img src="docs/demo.gif" alt="Demo" />
