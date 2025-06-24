@@ -1,4 +1,4 @@
-# Massive CSV Processor 🚀 – High-Volume, Real-Time CSV Import System
+# Massive CSV Processor 🚀
 
 A scalable and high-performance full-stack system designed for **massive CSV file processing**. Capable of handling **millions of rows**, this solution leverages **NestJS**, **BullMQ**, **Redis**, and **PostgreSQL** on the backend, combined with a **React Native mobile client** for real-time monitoring via **WebSocket**.
 
@@ -66,7 +66,7 @@ Then follow the steps in its [README.md](./mobile/README.md) to:
 
 5. Upload a CSV file and watch the real-time processing progress
 
-## 🎬 Quick Demo (No Audio)
+## 🎬 Quick Demo
 
 Short demo of the system in action:
 
